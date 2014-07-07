@@ -38,16 +38,53 @@
     }
     return  identifier;
 }
+
+-(NSString*)segueIdentifierForIndexPathInLeftMenu:(NSIndexPath *)indexPath{
+    NSString* identifier;
+    switch (indexPath.row) {
+        case 0:
+            identifier = @"MainPage";
+            break;
+        case 1:
+            identifier = @"MainPage";
+            break;
+        case 2:
+            identifier = @"LocalDeals";
+            break;
+            
+        default:
+            break;
+    }
+    return  identifier;
+}
+
+- (AMPrimaryMenu)primaryMenu{
+    return AMPrimaryMenuRight;
+};
+
 - (CGFloat)panGestureWarkingAreaPercent{
     return 0;
 }
 
--(void)configureRightMenuButton:(UIButton *)button{
+-(void)configureLeftMenuButton:(UIButton *)button{
     CGRect frame = button.frame;
     frame.origin = (CGPoint){0,0};
     frame.size = (CGSize){40,40};
     button.frame = frame;
     [button setImage:[UIImage imageNamed:@"setting.png"] forState:UIControlStateNormal];
+    [button addTarget:self action:@selector(buttonTapped:) forControlEvents:UIControlEventTouchUpInside];
+    barButton = [[BBBadgeBarButtonItem alloc] initWithCustomUIButton:button];
+    
+    
+
+}
+
+-(void)configureRightMenuButton:(UIButton *)button{
+    CGRect frame = button.frame;
+    frame.origin = (CGPoint){0,0};
+    frame.size = (CGSize){32,32};
+    button.frame = frame;
+    [button setImage:[UIImage imageNamed:@"configure.png"] forState:UIControlStateNormal];
     [button addTarget:self action:@selector(buttonTapped:) forControlEvents:UIControlEventTouchUpInside];
     barButton = [[BBBadgeBarButtonItem alloc] initWithCustomUIButton:button];
     

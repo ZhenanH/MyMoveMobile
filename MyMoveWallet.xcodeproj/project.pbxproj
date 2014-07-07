@@ -26,6 +26,8 @@
 		D02E9EE3196484FC00C443E6 /* UIImage+MPAverageColor.m in Sources */ = {isa = PBXBuildFile; fileRef = D02E9ED0196484FC00C443E6 /* UIImage+MPAverageColor.m */; };
 		D02E9EE4196484FC00C443E6 /* UIImage+MPImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = D02E9ED2196484FC00C443E6 /* UIImage+MPImageEffects.m */; };
 		D02E9EE5196484FC00C443E6 /* UIView+MPSnapshotImage.m in Sources */ = {isa = PBXBuildFile; fileRef = D02E9ED4196484FC00C443E6 /* UIView+MPSnapshotImage.m */; };
+		D02E9F0E196B3D7400C443E6 /* configure.png in Resources */ = {isa = PBXBuildFile; fileRef = D02E9F0D196B3D7400C443E6 /* configure.png */; };
+		D02E9F11196B444A00C443E6 /* LocalDealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D02E9F10196B444A00C443E6 /* LocalDealViewController.m */; };
 		D0C7806019390B4D005D55FB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0C7805F19390B4D005D55FB /* Foundation.framework */; };
 		D0C7806219390B4D005D55FB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0C7806119390B4D005D55FB /* CoreGraphics.framework */; };
 		D0C7806419390B4D005D55FB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0C7806319390B4D005D55FB /* UIKit.framework */; };
@@ -134,6 +136,9 @@
 		D02E9ED2196484FC00C443E6 /* UIImage+MPImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+MPImageEffects.m"; sourceTree = "<group>"; };
 		D02E9ED3196484FC00C443E6 /* UIView+MPSnapshotImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MPSnapshotImage.h"; sourceTree = "<group>"; };
 		D02E9ED4196484FC00C443E6 /* UIView+MPSnapshotImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MPSnapshotImage.m"; sourceTree = "<group>"; };
+		D02E9F0D196B3D7400C443E6 /* configure.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = configure.png; sourceTree = "<group>"; };
+		D02E9F0F196B444A00C443E6 /* LocalDealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalDealViewController.h; sourceTree = "<group>"; };
+		D02E9F10196B444A00C443E6 /* LocalDealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalDealViewController.m; sourceTree = "<group>"; };
 		D0C7805C19390B4D005D55FB /* MyMoveWallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyMoveWallet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0C7805F19390B4D005D55FB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D0C7806119390B4D005D55FB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -352,6 +357,8 @@
 				D0C7806F19390B4D005D55FB /* AppDelegate.m */,
 				D0C7807719390B4D005D55FB /* ViewController.h */,
 				D0C7807819390B4D005D55FB /* ViewController.m */,
+				D02E9F0F196B444A00C443E6 /* LocalDealViewController.h */,
+				D02E9F10196B444A00C443E6 /* LocalDealViewController.m */,
 				D0C7807A19390B4D005D55FB /* Images.xcassets */,
 				D0C7806619390B4D005D55FB /* Supporting Files */,
 			);
@@ -402,6 +409,7 @@
 			children = (
 				D0DF07F8194AA83E00C10A63 /* setting.png */,
 				D0DF07D81948DCFE00C10A63 /* mymovelogo76.png */,
+				D02E9F0D196B3D7400C443E6 /* configure.png */,
 				D0DF07FE194F363A00C10A63 /* upgrade@2x.png */,
 				D0DF07FC194F347000C10A63 /* update@2x.png */,
 				D0DF07D61948DCCC00C10A63 /* mymovelogo120.png */,
@@ -548,6 +556,7 @@
 				D0DF07D71948DCCC00C10A63 /* mymovelogo120.png in Resources */,
 				D02E9ED8196484FC00C443E6 /* MPCloseBtn@2x.png in Resources */,
 				D0DF07FF194F363A00C10A63 /* upgrade@2x.png in Resources */,
+				D02E9F0E196B3D7400C443E6 /* configure.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -570,6 +579,7 @@
 				D0DF07EB194A8CCE00C10A63 /* AMSlideMenuLeftMenuSegue.m in Sources */,
 				D0DF07EF194A8CCE00C10A63 /* AMSlideMenuRightTableViewController.m in Sources */,
 				D0DF07EA194A8CCE00C10A63 /* AMSlideMenuContentSegue.m in Sources */,
+				D02E9F11196B444A00C443E6 /* LocalDealViewController.m in Sources */,
 				D02E9ED6196484FC00C443E6 /* Mixpanel.m in Sources */,
 				D0DF07F0194A8CCE00C10A63 /* UIViewController+AMSlideMenu.m in Sources */,
 				D0C7807919390B4D005D55FB /* ViewController.m in Sources */,

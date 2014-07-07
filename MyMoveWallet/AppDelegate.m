@@ -19,8 +19,8 @@
     [Parse setApplicationId:@"NfzjaOxENPzKYkqKogb6gc0yNqQmS7rGqZ3N3rn5"
                   clientKey:@"0cNTK9ZHS3fic2aQBuT80xg9ejY8wKPeOUHSxHrA"];
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
-    [Mixpanel sharedInstanceWithToken:@"be78fcacdeae95626e6582fa62d4662f"];
-
+    //[Mixpanel sharedInstanceWithToken:@"be78fcacdeae95626e6582fa62d4662f"];
+    [Mixpanel sharedInstanceWithToken:@"be78fcacdeae95626e6582fa62d4662ff"];
 
     
     //generate unique user id
