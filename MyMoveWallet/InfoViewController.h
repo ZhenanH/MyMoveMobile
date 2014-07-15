@@ -1,15 +1,17 @@
 //
-//  LocalDealViewController.h
+//  InfoViewController.h
 //  MyMoveWallet
 //
-//  Created by Zhenan Hong on 7/7/14.
+//  Created by Zhenan Hong on 7/9/14.
 //  Copyright (c) 2014 Lean Develop. All rights reserved.
 //
 
 #import <Cordova/CDVViewController.h>
 
-@interface LocalDealViewController : UIViewController<UIWebViewDelegate,CLLocationManagerDelegate>
+@interface InfoViewController : UIViewController<UIWebViewDelegate>
 @property (strong, nonatomic) IBOutlet UIWebView *webView;
 @property (strong, nonatomic) IBOutlet UIActivityIndicatorView *loading;
-@property (strong, nonatomic) CLLocationManager *locationManager;
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *back;
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *forward;
+
 @end

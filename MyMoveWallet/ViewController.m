@@ -18,14 +18,14 @@
 
 @implementation ViewController{
     CLLocation *location;
+    int webViewLoads;
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     [self.loading startAnimating];
-    self.startPage = @"";
-
+    webViewLoads = 0;
 
     self.webView.delegate = (id)self;
     
@@ -64,12 +64,21 @@
     
 }
 
+- (void)webViewDidStartLoad:(UIWebView *)webView {
+    webViewLoads++;
+}
+
 - (void)webViewDidFinishLoad:(UIWebView *)webView {
+    webViewLoads--;
+    
+    if (webViewLoads > 0) {
+        return;
+    }
     [self.loading stopAnimating];
     
     NSString *currentURL = webView.request.URL.relativePath;
     NSLog(@"currentURL: %@",currentURL);
-    if([currentURL isEqualToString:@"/mymovemobile/brands"])
+    if([currentURL isEqualToString:@"/mymovemobile/brands_tiles"])
     {
         NSLog(@"loaded: %@",[[PFUser currentUser] username]);
         NSString* objectidStript = [NSString stringWithFormat:@"userObjID = '%@'",[[PFUser currentUser] objectId]];
@@ -82,6 +91,11 @@
 }
 
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
+    
+    if (webViewLoads > 0) {
+        return NO;
+    }
+    
     NSString *requestString = [[[request URL] absoluteString] stringByReplacingPercentEscapesUsingEncoding: NSUTF8StringEncoding];
     NSArray *requestArray = [requestString componentsSeparatedByString:@":##sendToApp##"];
     

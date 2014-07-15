@@ -8,6 +8,8 @@
 
 #import "LocalDealViewController.h"
 #import <Parse/Parse.h>
+#import "NSObject+SEWebviewJSListener.h"
+#import "DMWebBrowserViewController.h"
 @interface LocalDealViewController ()
 
 @end
@@ -15,6 +17,7 @@
 @implementation LocalDealViewController
 {
  CLLocation *location;
+int webViewLoads;
 }
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -29,8 +32,10 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-
+    [self.loading startAnimating];
+    webViewLoads=0;
     self.webView.delegate = (id)self;
+    [self.webView setMediaPlaybackRequiresUserAction:NO];
     [self initializeLocationManager];
     [self initializeLocationUpdates];
     NSLog(@"in local deals");
@@ -42,8 +47,32 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)webViewDidFinishLoad:(UIWebView *)webView {
+- (void)webViewDidStartLoad:(UIWebView *)webView {
+    webViewLoads++;
+}
 
+- (void)webViewDidFinishLoad:(UIWebView *)webView {
+    webViewLoads--;
+    [self.loading stopAnimating];
+    if (webViewLoads > 0) {
+        return;
+    }
+    
+    CLGeocoder *reverseGeocoder = [[CLGeocoder alloc] init];
+    
+    [reverseGeocoder reverseGeocodeLocation:self.locationManager.location completionHandler:^(NSArray *placemarks, NSError *error)
+     {
+         
+         CLPlacemark *myPlacemark = [placemarks objectAtIndex:0];
+         NSString *city = myPlacemark.addressDictionary[@"City"];
+         NSString *state = myPlacemark.addressDictionary[@"State"];
+         //NSLog(@"My country code: %@ and countryName: %@", city, state);
+         NSString *locationTitle = [NSString stringWithFormat:@"setCurrentLocationTitle('%@, %@')",city, state];
+         [self.webView stringByEvaluatingJavaScriptFromString:locationTitle];
+         NSLog(@"setting title");
+     }];
+
+    NSLog(@"done loading");
 }
 
 - (void)initializeLocationManager {
@@ -92,11 +121,11 @@
         location = newLocation;
         
         
-        if (newLocation.horizontalAccuracy <= 100) {
+        if (newLocation.horizontalAccuracy <= 1000) {
             
             [self.locationManager stopUpdatingLocation];
             
-            NSURL *urlOverwrite = [NSURL URLWithString:[ NSString stringWithFormat: @"http://localhost:3000/mymovemobile/localdeals_native?latlng=%f,%f", location.coordinate.latitude,location.coordinate.longitude]];
+            NSURL *urlOverwrite = [NSURL URLWithString:[ NSString stringWithFormat: @"http://pbsmartlab.com/mymovemobile/localdeals_native?latlng=%f,%f", location.coordinate.latitude,location.coordinate.longitude]];
             NSURLRequest *request = [NSURLRequest requestWithURL:urlOverwrite];
             NSLog(@"in location manager %@",urlOverwrite);
             [self.webView loadRequest:request];
@@ -109,20 +138,7 @@
             [PFUser currentUser][@"lastLocation"]=point;
             [[PFUser currentUser] saveInBackground];
             
-            CLGeocoder *reverseGeocoder = [[CLGeocoder alloc] init];
-            
-            [reverseGeocoder reverseGeocodeLocation:self.locationManager.location completionHandler:^(NSArray *placemarks, NSError *error)
-             {
-                 
-                 CLPlacemark *myPlacemark = [placemarks objectAtIndex:0];
-                 NSString *city = myPlacemark.addressDictionary[@"City"];
-                 NSString *state = myPlacemark.addressDictionary[@"State"];
-                 //NSLog(@"My country code: %@ and countryName: %@", city, state);
-                 NSString *locationTitle = [NSString stringWithFormat:@"setCurrentLocationTitle('%@, %@')",city, state];
-                 [self.webView stringByEvaluatingJavaScriptFromString:locationTitle];
-                 NSLog(@"setting title");
-             }];
-        }
+             }
     }
     
 }
@@ -137,5 +153,49 @@
     [alertView show];
 }
 
+- (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
 
+    
+    if (webViewLoads > 0) {
+        return NO;
+    }
+    
+    NSString *requestString = [[[request URL] absoluteString] stringByReplacingPercentEscapesUsingEncoding: NSUTF8StringEncoding];
+    NSArray *requestArray = [requestString componentsSeparatedByString:@":##sendToApp##"];
+    
+    if ([requestArray count] > 1){
+        NSString *requestPrefix = [[requestArray objectAtIndex:0] lowercaseString];
+        NSString *requestMssg = ([requestArray count] > 0) ? [requestArray objectAtIndex:1] : @"";
+        [self webviewMessageKey:requestPrefix value:requestMssg];
+        return NO;
+    }
+    else if (navigationType == UIWebViewNavigationTypeLinkClicked && [self shouldOpenLinksExternally]) {
+        // open links in safari
+        //[[UIApplication sharedApplication] openURL:[request URL]];
+        return YES;
+    }
+    return YES;
+}
+
+-(void)webviewMessageKey:(NSString *)key value:(NSString *)val{
+    NSLog(@"herere!!! %@",key);
+    if ([key isEqualToString:@"openwebview"]) {
+        DMWebBrowserViewController *webBrowser = [[DMWebBrowserViewController alloc]
+                                                  initWithURL:[NSURL URLWithString:val]
+                                                  startLoadingWithBlock:^{
+                                                      NSLog(@"start loading web browser page");
+                                                  } andEndLoadingWithBlock:^{
+                                                      NSLog(@"end loading web browser page");
+                                                  }];
+        //[webBrowser setNavBarColor:[UIColor orangeColor]];
+        [self presentViewController:webBrowser animated:YES completion:nil];
+        
+    }
+    
+    if ([key isEqualToString:@"locationpermission"]) {
+        [self initializeLocationManager];
+        [self initializeLocationUpdates];
+        
+    }
+}
 @end

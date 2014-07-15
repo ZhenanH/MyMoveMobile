@@ -51,7 +51,9 @@
         case 2:
             identifier = @"LocalDeals";
             break;
-            
+        case 3:
+            identifier = @"howTo";
+            break;
         default:
             break;
     }
@@ -69,9 +71,9 @@
 -(void)configureLeftMenuButton:(UIButton *)button{
     CGRect frame = button.frame;
     frame.origin = (CGPoint){0,0};
-    frame.size = (CGSize){40,40};
+    frame.size = (CGSize){32,32};
     button.frame = frame;
-    [button setImage:[UIImage imageNamed:@"setting.png"] forState:UIControlStateNormal];
+    [button setImage:[UIImage imageNamed:@"menu2.png"] forState:UIControlStateNormal];
     [button addTarget:self action:@selector(buttonTapped:) forControlEvents:UIControlEventTouchUpInside];
     barButton = [[BBBadgeBarButtonItem alloc] initWithCustomUIButton:button];
     
@@ -84,7 +86,7 @@
     frame.origin = (CGPoint){0,0};
     frame.size = (CGSize){32,32};
     button.frame = frame;
-    [button setImage:[UIImage imageNamed:@"configure.png"] forState:UIControlStateNormal];
+    [button setImage:[UIImage imageNamed:@"setting.png"] forState:UIControlStateNormal];
     [button addTarget:self action:@selector(buttonTapped:) forControlEvents:UIControlEventTouchUpInside];
     barButton = [[BBBadgeBarButtonItem alloc] initWithCustomUIButton:button];
     

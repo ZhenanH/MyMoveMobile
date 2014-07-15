@@ -43,6 +43,16 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+   
+}
+
+-(void)viewDidAppear: (BOOL)animated{
+    [super viewDidAppear:animated];
+
+    NSIndexPath *indexPath=[NSIndexPath indexPathForRow:1 inSection:0];
+    [self.tableView selectRowAtIndexPath:indexPath animated:NO  scrollPosition:UITableViewScrollPositionNone];
+
 }
 
 - (void)openContentNavigationController:(UINavigationController *)nvc
@@ -60,8 +70,36 @@
 #pragma mark - TableView Delegate -
 /*----------------------------------------------------*/
 
+-(BOOL)clearsSelectionOnViewWillAppear{
+    return NO;
+}
+
+-(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath{
+
+    UIView *v = [[UIView alloc] init];
+    v.backgroundColor = [UIColor clearColor];
+    cell.selectedBackgroundView = v;
+    cell.textLabel.textColor = [UIColor whiteColor];
+    cell.textLabel.highlightedTextColor = [UIColor colorWithRed:234/255.0 green:85/255.0 blue:45/255.0 alpha:1];
+    
+    if(indexPath.row ==1){
+        cell.textLabel.text = @"Today's Coupons";
+        
+    }
+    if(indexPath.row ==2){
+        cell.textLabel.text = @"Local Deals";
+    }
+    if(indexPath.row ==3){
+        cell.textLabel.text = @"How-to Resources";
+    }
+    
+}
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+
+    NSLog(@"selected@");
+    
     if ([self.mainVC respondsToSelector:@selector(navigationControllerForIndexPathInLeftMenu:)]) {
         UINavigationController *navController = [self.mainVC navigationControllerForIndexPathInLeftMenu:indexPath];
         AMSlideMenuContentSegue *segue = [[AMSlideMenuContentSegue alloc] initWithIdentifier:@"ContentSugue" source:self destination:navController];

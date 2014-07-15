@@ -28,6 +28,11 @@
 		D02E9EE5196484FC00C443E6 /* UIView+MPSnapshotImage.m in Sources */ = {isa = PBXBuildFile; fileRef = D02E9ED4196484FC00C443E6 /* UIView+MPSnapshotImage.m */; };
 		D02E9F0E196B3D7400C443E6 /* configure.png in Resources */ = {isa = PBXBuildFile; fileRef = D02E9F0D196B3D7400C443E6 /* configure.png */; };
 		D02E9F11196B444A00C443E6 /* LocalDealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D02E9F10196B444A00C443E6 /* LocalDealViewController.m */; };
+		D02E9F16196B768100C443E6 /* setting.png in Resources */ = {isa = PBXBuildFile; fileRef = D02E9F14196B768100C443E6 /* setting.png */; };
+		D02E9F17196B768100C443E6 /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = D02E9F15196B768100C443E6 /* menu.png */; };
+		D02E9F1B196DB5D500C443E6 /* menu2.png in Resources */ = {isa = PBXBuildFile; fileRef = D02E9F1A196DB5D500C443E6 /* menu2.png */; };
+		D02E9F1E196DB79500C443E6 /* InfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D02E9F1D196DB79500C443E6 /* InfoViewController.m */; };
+		D02E9F2119705FEB00C443E6 /* PolicyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D02E9F2019705FEB00C443E6 /* PolicyViewController.m */; };
 		D0C7806019390B4D005D55FB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0C7805F19390B4D005D55FB /* Foundation.framework */; };
 		D0C7806219390B4D005D55FB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0C7806119390B4D005D55FB /* CoreGraphics.framework */; };
 		D0C7806419390B4D005D55FB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0C7806319390B4D005D55FB /* UIKit.framework */; };
@@ -71,7 +76,6 @@
 		D0DF07EF194A8CCE00C10A63 /* AMSlideMenuRightTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0DF07E7194A8CCE00C10A63 /* AMSlideMenuRightTableViewController.m */; };
 		D0DF07F0194A8CCE00C10A63 /* UIViewController+AMSlideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = D0DF07E9194A8CCE00C10A63 /* UIViewController+AMSlideMenu.m */; };
 		D0DF07F3194A91DB00C10A63 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0DF07F2194A91DB00C10A63 /* RootViewController.m */; };
-		D0DF07F9194AA83E00C10A63 /* setting.png in Resources */ = {isa = PBXBuildFile; fileRef = D0DF07F8194AA83E00C10A63 /* setting.png */; };
 		D0DF07FD194F347000C10A63 /* update@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D0DF07FC194F347000C10A63 /* update@2x.png */; };
 		D0DF07FF194F363A00C10A63 /* upgrade@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D0DF07FE194F363A00C10A63 /* upgrade@2x.png */; };
 		D0DF0802194F3A5400C10A63 /* BBBadgeBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D0DF0801194F3A5400C10A63 /* BBBadgeBarButtonItem.m */; };
@@ -139,6 +143,13 @@
 		D02E9F0D196B3D7400C443E6 /* configure.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = configure.png; sourceTree = "<group>"; };
 		D02E9F0F196B444A00C443E6 /* LocalDealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalDealViewController.h; sourceTree = "<group>"; };
 		D02E9F10196B444A00C443E6 /* LocalDealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalDealViewController.m; sourceTree = "<group>"; };
+		D02E9F14196B768100C443E6 /* setting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = setting.png; sourceTree = "<group>"; };
+		D02E9F15196B768100C443E6 /* menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu.png; sourceTree = "<group>"; };
+		D02E9F1A196DB5D500C443E6 /* menu2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu2.png; sourceTree = "<group>"; };
+		D02E9F1C196DB79500C443E6 /* InfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoViewController.h; sourceTree = "<group>"; };
+		D02E9F1D196DB79500C443E6 /* InfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoViewController.m; sourceTree = "<group>"; };
+		D02E9F1F19705FEB00C443E6 /* PolicyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PolicyViewController.h; sourceTree = "<group>"; };
+		D02E9F2019705FEB00C443E6 /* PolicyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PolicyViewController.m; sourceTree = "<group>"; };
 		D0C7805C19390B4D005D55FB /* MyMoveWallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyMoveWallet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0C7805F19390B4D005D55FB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D0C7806119390B4D005D55FB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -196,7 +207,6 @@
 		D0DF07E9194A8CCE00C10A63 /* UIViewController+AMSlideMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+AMSlideMenu.m"; sourceTree = "<group>"; };
 		D0DF07F1194A91DB00C10A63 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		D0DF07F2194A91DB00C10A63 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
-		D0DF07F8194AA83E00C10A63 /* setting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = setting.png; sourceTree = "<group>"; };
 		D0DF07FC194F347000C10A63 /* update@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "update@2x.png"; sourceTree = "<group>"; };
 		D0DF07FE194F363A00C10A63 /* upgrade@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "upgrade@2x.png"; sourceTree = "<group>"; };
 		D0DF0800194F3A5400C10A63 /* BBBadgeBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBBadgeBarButtonItem.h; sourceTree = "<group>"; };
@@ -359,6 +369,10 @@
 				D0C7807819390B4D005D55FB /* ViewController.m */,
 				D02E9F0F196B444A00C443E6 /* LocalDealViewController.h */,
 				D02E9F10196B444A00C443E6 /* LocalDealViewController.m */,
+				D02E9F1C196DB79500C443E6 /* InfoViewController.h */,
+				D02E9F1D196DB79500C443E6 /* InfoViewController.m */,
+				D02E9F1F19705FEB00C443E6 /* PolicyViewController.h */,
+				D02E9F2019705FEB00C443E6 /* PolicyViewController.m */,
 				D0C7807A19390B4D005D55FB /* Images.xcassets */,
 				D0C7806619390B4D005D55FB /* Supporting Files */,
 			);
@@ -407,7 +421,9 @@
 		D0DF07D51948DCBD00C10A63 /* images */ = {
 			isa = PBXGroup;
 			children = (
-				D0DF07F8194AA83E00C10A63 /* setting.png */,
+				D02E9F1A196DB5D500C443E6 /* menu2.png */,
+				D02E9F14196B768100C443E6 /* setting.png */,
+				D02E9F15196B768100C443E6 /* menu.png */,
 				D0DF07D81948DCFE00C10A63 /* mymovelogo76.png */,
 				D02E9F0D196B3D7400C443E6 /* configure.png */,
 				D0DF07FE194F363A00C10A63 /* upgrade@2x.png */,
@@ -543,17 +559,19 @@
 			files = (
 				D02E9EDA196484FC00C443E6 /* MPNotification.storyboard in Resources */,
 				D0DF07FD194F347000C10A63 /* update@2x.png in Resources */,
+				D02E9F17196B768100C443E6 /* menu.png in Resources */,
 				D0C7807619390B4D005D55FB /* Main_iPad.storyboard in Resources */,
 				D0DF07D91948DCFE00C10A63 /* mymovelogo76.png in Resources */,
 				D02E9EDD196484FC00C443E6 /* MPSurvey.storyboard in Resources */,
 				D0C7807B19390B4D005D55FB /* Images.xcassets in Resources */,
 				D0C7807319390B4D005D55FB /* Main_iPhone.storyboard in Resources */,
 				D02E9ED5196484FC00C443E6 /* Media.xcassets in Resources */,
-				D0DF07F9194AA83E00C10A63 /* setting.png in Resources */,
+				D02E9F1B196DB5D500C443E6 /* menu2.png in Resources */,
 				D0C7806A19390B4D005D55FB /* InfoPlist.strings in Resources */,
 				D02E9ED7196484FC00C443E6 /* MPCloseBtn.png in Resources */,
 				D0C7809819390B72005D55FB /* config.xml in Resources */,
 				D0DF07D71948DCCC00C10A63 /* mymovelogo120.png in Resources */,
+				D02E9F16196B768100C443E6 /* setting.png in Resources */,
 				D02E9ED8196484FC00C443E6 /* MPCloseBtn@2x.png in Resources */,
 				D0DF07FF194F363A00C10A63 /* upgrade@2x.png in Resources */,
 				D02E9F0E196B3D7400C443E6 /* configure.png in Resources */,
@@ -583,6 +601,7 @@
 				D02E9ED6196484FC00C443E6 /* Mixpanel.m in Sources */,
 				D0DF07F0194A8CCE00C10A63 /* UIViewController+AMSlideMenu.m in Sources */,
 				D0C7807919390B4D005D55FB /* ViewController.m in Sources */,
+				D02E9F2119705FEB00C443E6 /* PolicyViewController.m in Sources */,
 				D02E9EE4196484FC00C443E6 /* UIImage+MPImageEffects.m in Sources */,
 				D0DF07EC194A8CCE00C10A63 /* AMSlideMenuLeftTableViewController.m in Sources */,
 				D02E9E7F1958E13E00C443E6 /* NSObject+SEWebviewJSListener.m in Sources */,
@@ -597,6 +616,7 @@
 				D02E9EDB196484FC00C443E6 /* MPNotificationViewController.m in Sources */,
 				D02E9EE2196484FC00C443E6 /* UIColor+MPColor.m in Sources */,
 				D02E9EE0196484FC00C443E6 /* MPSurveyQuestionViewController.m in Sources */,
+				D02E9F1E196DB79500C443E6 /* InfoViewController.m in Sources */,
 				D02E9EE1196484FC00C443E6 /* NSData+MPBase64.m in Sources */,
 				D02E9ED9196484FC00C443E6 /* MPNotification.m in Sources */,
 				D02E9E7B1958E0AD00C443E6 /* NSObject+SEWebviewJSListener.m in Sources */,
