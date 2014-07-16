@@ -11,7 +11,7 @@
 #import <Parse/Parse.h>
 #import "NSObject+SEWebviewJSListener.h"
 #import "DMWebBrowserViewController.h"
-
+#import "Mixpanel.h"
 @interface ViewController ()
 
 @end
@@ -70,17 +70,18 @@
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView {
     webViewLoads--;
-    
+    [self.loading stopAnimating];
     if (webViewLoads > 0) {
         return;
     }
-    [self.loading stopAnimating];
+    
     
     NSString *currentURL = webView.request.URL.relativePath;
     NSLog(@"currentURL: %@",currentURL);
-    if([currentURL isEqualToString:@"/mymovemobile/brands_tiles"])
+    if([currentURL isEqualToString:@"/mymovemobile/brands2"])
     {
         NSLog(@"loaded: %@",[[PFUser currentUser] username]);
+        [[Mixpanel sharedInstance] identify:[[PFUser currentUser] objectId]];
         NSString* objectidStript = [NSString stringWithFormat:@"userObjID = '%@'",[[PFUser currentUser] objectId]];
         NSString* usernameStript = [NSString stringWithFormat:@"userName = '%@'",[[PFUser currentUser] username]];
         [webView stringByEvaluatingJavaScriptFromString:objectidStript];

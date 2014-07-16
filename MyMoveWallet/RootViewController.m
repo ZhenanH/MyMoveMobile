@@ -74,7 +74,7 @@
     frame.size = (CGSize){32,32};
     button.frame = frame;
     [button setImage:[UIImage imageNamed:@"menu2.png"] forState:UIControlStateNormal];
-    [button addTarget:self action:@selector(buttonTapped:) forControlEvents:UIControlEventTouchUpInside];
+    [button addTarget:self action:@selector(menubuttonTapped:) forControlEvents:UIControlEventTouchUpInside];
     barButton = [[BBBadgeBarButtonItem alloc] initWithCustomUIButton:button];
     
     
@@ -142,6 +142,10 @@
 -(void)buttonTapped:(UIButton*)button{
     [[Mixpanel sharedInstance] track:@"configure button clicked" ];
     barButton.badgeValue = @"0";
+}
+
+-(void)menubuttonTapped:(UIButton*)button{
+    [[Mixpanel sharedInstance] track:@"menu button clicked" ];
 }
 
 -(void)updateButtonTapped:(UIButton*)button{

@@ -29,7 +29,7 @@
 #import "AMSlideMenuMainViewController.h"
 
 #import "AMSlideMenuContentSegue.h"
-
+#import "Mixpanel.h"
 @interface AMSlideMenuLeftTableViewController ()
 
 @end
@@ -98,7 +98,12 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
 
-    NSLog(@"selected@");
+    if(indexPath.row ==2){
+            [[Mixpanel sharedInstance] track:@"get current location" ];
+    }
+    if(indexPath.row ==3){
+        [[Mixpanel sharedInstance] track:@"read How-to Resources" ];
+    }
     
     if ([self.mainVC respondsToSelector:@selector(navigationControllerForIndexPathInLeftMenu:)]) {
         UINavigationController *navController = [self.mainVC navigationControllerForIndexPathInLeftMenu:indexPath];

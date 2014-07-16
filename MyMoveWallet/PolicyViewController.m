@@ -32,7 +32,7 @@
     // Do any additional setup after loading the view.
     webViewLoads = 0;
     
-    NSURL *urlOverwrite = [NSURL URLWithString:[ NSString stringWithFormat: @"http://localhost:3000/mymovemobile/policy"]];
+    NSURL *urlOverwrite = [NSURL URLWithString:[ NSString stringWithFormat: @"http://pbsmartlab.com/mymovemobile/policy"]];
     NSURLRequest *request = [NSURLRequest requestWithURL:urlOverwrite];
     NSLog(@"in location manager %@",urlOverwrite);
     [self.webView loadRequest:request];

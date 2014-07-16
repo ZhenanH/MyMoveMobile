@@ -10,6 +10,7 @@
 #import <Parse/Parse.h>
 #import "NSObject+SEWebviewJSListener.h"
 #import "DMWebBrowserViewController.h"
+#import "Mixpanel.h"
 @interface LocalDealViewController ()
 
 @end
@@ -24,6 +25,7 @@ int webViewLoads;
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+
     }
     return self;
 }
@@ -38,7 +40,8 @@ int webViewLoads;
     [self.webView setMediaPlaybackRequiresUserAction:NO];
     [self initializeLocationManager];
     [self initializeLocationUpdates];
-    NSLog(@"in local deals");
+    
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -124,6 +127,8 @@ int webViewLoads;
         if (newLocation.horizontalAccuracy <= 1000) {
             
             [self.locationManager stopUpdatingLocation];
+            
+            [[Mixpanel sharedInstance] track:@"set current location" ];
             
             NSURL *urlOverwrite = [NSURL URLWithString:[ NSString stringWithFormat: @"http://pbsmartlab.com/mymovemobile/localdeals_native?latlng=%f,%f", location.coordinate.latitude,location.coordinate.longitude]];
             NSURLRequest *request = [NSURLRequest requestWithURL:urlOverwrite];
