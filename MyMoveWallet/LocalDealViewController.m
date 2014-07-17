@@ -11,6 +11,7 @@
 #import "NSObject+SEWebviewJSListener.h"
 #import "DMWebBrowserViewController.h"
 #import "Mixpanel.h"
+#import "LocalMapViewController.h"
 @interface LocalDealViewController ()
 
 @end
@@ -202,5 +203,19 @@ int webViewLoads;
         [self initializeLocationUpdates];
         
     }
+    
+    if ([key isEqualToString:@"openmapview"]) {
+        NSDictionary *JSON = [NSJSONSerialization JSONObjectWithData: [val dataUsingEncoding:NSUTF8StringEncoding]
+                                                             options: NSJSONReadingMutableContainers
+                                                               error: NULL];
+        [self performSegueWithIdentifier:@"localMap" sender:JSON];
+        
+    
+    }
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+     LocalMapViewController* targetVC = (LocalMapViewController*)segue.destinationViewController;
+     targetVC.localDeals = sender;
 }
 @end

@@ -7,7 +7,7 @@
     <author email="dev@cordova.apache.org" href="http://cordova.io">
         Apache Cordova Team
     </author>
-    <content src="http://localhost:3000/mymovemobile/brands2" />
+    <content src="http://pbsmartlab.com/mymovemobile/brands2" />
     <access origin="*" />
     <feature name="Device">
         <param name="ios-package" value="CDVDevice" />

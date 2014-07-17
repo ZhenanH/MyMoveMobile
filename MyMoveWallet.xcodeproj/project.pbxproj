@@ -33,6 +33,9 @@
 		D02E9F1B196DB5D500C443E6 /* menu2.png in Resources */ = {isa = PBXBuildFile; fileRef = D02E9F1A196DB5D500C443E6 /* menu2.png */; };
 		D02E9F1E196DB79500C443E6 /* InfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D02E9F1D196DB79500C443E6 /* InfoViewController.m */; };
 		D02E9F2119705FEB00C443E6 /* PolicyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D02E9F2019705FEB00C443E6 /* PolicyViewController.m */; };
+		D02E9F251976FD6100C443E6 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D02E9F241976FD6100C443E6 /* MapKit.framework */; };
+		D02E9F28197700F800C443E6 /* LocalMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D02E9F27197700F800C443E6 /* LocalMapViewController.m */; };
+		D02E9F2B1977128300C443E6 /* MapViewAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = D02E9F2A1977128300C443E6 /* MapViewAnnotation.m */; };
 		D0C7806019390B4D005D55FB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0C7805F19390B4D005D55FB /* Foundation.framework */; };
 		D0C7806219390B4D005D55FB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0C7806119390B4D005D55FB /* CoreGraphics.framework */; };
 		D0C7806419390B4D005D55FB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0C7806319390B4D005D55FB /* UIKit.framework */; };
@@ -150,6 +153,11 @@
 		D02E9F1D196DB79500C443E6 /* InfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoViewController.m; sourceTree = "<group>"; };
 		D02E9F1F19705FEB00C443E6 /* PolicyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PolicyViewController.h; sourceTree = "<group>"; };
 		D02E9F2019705FEB00C443E6 /* PolicyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PolicyViewController.m; sourceTree = "<group>"; };
+		D02E9F241976FD6100C443E6 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		D02E9F26197700F800C443E6 /* LocalMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalMapViewController.h; sourceTree = "<group>"; };
+		D02E9F27197700F800C443E6 /* LocalMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalMapViewController.m; sourceTree = "<group>"; };
+		D02E9F291977128300C443E6 /* MapViewAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewAnnotation.h; sourceTree = "<group>"; };
+		D02E9F2A1977128300C443E6 /* MapViewAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewAnnotation.m; sourceTree = "<group>"; };
 		D0C7805C19390B4D005D55FB /* MyMoveWallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyMoveWallet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0C7805F19390B4D005D55FB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D0C7806119390B4D005D55FB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -220,6 +228,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D02E9F251976FD6100C443E6 /* MapKit.framework in Frameworks */,
 				D0C78177193F73CB005D55FB /* StoreKit.framework in Frameworks */,
 				D0C78175193F73C2005D55FB /* Security.framework in Frameworks */,
 				D0C78173193F73B5005D55FB /* libz.dylib in Frameworks */,
@@ -259,6 +268,8 @@
 		D02E9E7C1958E0D900C443E6 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				D02E9F291977128300C443E6 /* MapViewAnnotation.h */,
+				D02E9F2A1977128300C443E6 /* MapViewAnnotation.m */,
 				D02E9E7D1958E13E00C443E6 /* NSObject+SEWebviewJSListener.h */,
 				D02E9E7E1958E13E00C443E6 /* NSObject+SEWebviewJSListener.m */,
 				D0DF08461950ED1D00C10A63 /* DMWebBrowserViewController.h */,
@@ -332,6 +343,7 @@
 		D0C7805E19390B4D005D55FB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D02E9F241976FD6100C443E6 /* MapKit.framework */,
 				D0C78176193F73CB005D55FB /* StoreKit.framework */,
 				D0C78174193F73C2005D55FB /* Security.framework */,
 				D0C78172193F73B5005D55FB /* libz.dylib */,
@@ -373,6 +385,8 @@
 				D02E9F1D196DB79500C443E6 /* InfoViewController.m */,
 				D02E9F1F19705FEB00C443E6 /* PolicyViewController.h */,
 				D02E9F2019705FEB00C443E6 /* PolicyViewController.m */,
+				D02E9F26197700F800C443E6 /* LocalMapViewController.h */,
+				D02E9F27197700F800C443E6 /* LocalMapViewController.m */,
 				D0C7807A19390B4D005D55FB /* Images.xcassets */,
 				D0C7806619390B4D005D55FB /* Supporting Files */,
 			);
@@ -595,6 +609,7 @@
 			files = (
 				D02E9EDE196484FC00C443E6 /* MPSurveyNavigationController.m in Sources */,
 				D0DF07EB194A8CCE00C10A63 /* AMSlideMenuLeftMenuSegue.m in Sources */,
+				D02E9F2B1977128300C443E6 /* MapViewAnnotation.m in Sources */,
 				D0DF07EF194A8CCE00C10A63 /* AMSlideMenuRightTableViewController.m in Sources */,
 				D0DF07EA194A8CCE00C10A63 /* AMSlideMenuContentSegue.m in Sources */,
 				D02E9F11196B444A00C443E6 /* LocalDealViewController.m in Sources */,
@@ -622,6 +637,7 @@
 				D02E9E7B1958E0AD00C443E6 /* NSObject+SEWebviewJSListener.m in Sources */,
 				D0DF07EE194A8CCE00C10A63 /* AMSlideMenuRightMenuSegue.m in Sources */,
 				D0DF08481950ED1D00C10A63 /* DMWebBrowserViewController.m in Sources */,
+				D02E9F28197700F800C443E6 /* LocalMapViewController.m in Sources */,
 				D0C7806C19390B4D005D55FB /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
