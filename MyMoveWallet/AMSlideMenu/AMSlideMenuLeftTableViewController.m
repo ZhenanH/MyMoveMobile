@@ -92,7 +92,8 @@
     if(indexPath.row ==3){
         cell.textLabel.text = @"How-to Resources";
     }
-    
+
+
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -104,6 +105,7 @@
     if(indexPath.row ==3){
         [[Mixpanel sharedInstance] track:@"read How-to Resources" ];
     }
+
     
     if ([self.mainVC respondsToSelector:@selector(navigationControllerForIndexPathInLeftMenu:)]) {
         UINavigationController *navController = [self.mainVC navigationControllerForIndexPathInLeftMenu:indexPath];

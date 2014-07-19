@@ -36,6 +36,7 @@
 		D02E9F251976FD6100C443E6 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D02E9F241976FD6100C443E6 /* MapKit.framework */; };
 		D02E9F28197700F800C443E6 /* LocalMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D02E9F27197700F800C443E6 /* LocalMapViewController.m */; };
 		D02E9F2B1977128300C443E6 /* MapViewAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = D02E9F2A1977128300C443E6 /* MapViewAnnotation.m */; };
+		D02E9F2E197860EB00C443E6 /* DemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D02E9F2D197860EB00C443E6 /* DemoViewController.m */; };
 		D0C7806019390B4D005D55FB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0C7805F19390B4D005D55FB /* Foundation.framework */; };
 		D0C7806219390B4D005D55FB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0C7806119390B4D005D55FB /* CoreGraphics.framework */; };
 		D0C7806419390B4D005D55FB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0C7806319390B4D005D55FB /* UIKit.framework */; };
@@ -158,6 +159,8 @@
 		D02E9F27197700F800C443E6 /* LocalMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalMapViewController.m; sourceTree = "<group>"; };
 		D02E9F291977128300C443E6 /* MapViewAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewAnnotation.h; sourceTree = "<group>"; };
 		D02E9F2A1977128300C443E6 /* MapViewAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewAnnotation.m; sourceTree = "<group>"; };
+		D02E9F2C197860EB00C443E6 /* DemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoViewController.h; sourceTree = "<group>"; };
+		D02E9F2D197860EB00C443E6 /* DemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoViewController.m; sourceTree = "<group>"; };
 		D0C7805C19390B4D005D55FB /* MyMoveWallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyMoveWallet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0C7805F19390B4D005D55FB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D0C7806119390B4D005D55FB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -381,6 +384,8 @@
 				D0C7807819390B4D005D55FB /* ViewController.m */,
 				D02E9F0F196B444A00C443E6 /* LocalDealViewController.h */,
 				D02E9F10196B444A00C443E6 /* LocalDealViewController.m */,
+				D02E9F2C197860EB00C443E6 /* DemoViewController.h */,
+				D02E9F2D197860EB00C443E6 /* DemoViewController.m */,
 				D02E9F1C196DB79500C443E6 /* InfoViewController.h */,
 				D02E9F1D196DB79500C443E6 /* InfoViewController.m */,
 				D02E9F1F19705FEB00C443E6 /* PolicyViewController.h */,
@@ -607,6 +612,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D02E9F2E197860EB00C443E6 /* DemoViewController.m in Sources */,
 				D02E9EDE196484FC00C443E6 /* MPSurveyNavigationController.m in Sources */,
 				D0DF07EB194A8CCE00C10A63 /* AMSlideMenuLeftMenuSegue.m in Sources */,
 				D02E9F2B1977128300C443E6 /* MapViewAnnotation.m in Sources */,

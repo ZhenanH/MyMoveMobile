@@ -131,7 +131,7 @@ int webViewLoads;
             
             [[Mixpanel sharedInstance] track:@"set current location" ];
             
-            NSURL *urlOverwrite = [NSURL URLWithString:[ NSString stringWithFormat: @"http://pbsmartlab.com/mymovemobile/localdeals_native?latlng=%f,%f", location.coordinate.latitude,location.coordinate.longitude]];
+            NSURL *urlOverwrite = [NSURL URLWithString:[ NSString stringWithFormat: @"http://localhost:3000/mymovemobile/localdeals_native?latlng=%f,%f", location.coordinate.latitude,location.coordinate.longitude]];
             NSURLRequest *request = [NSURLRequest requestWithURL:urlOverwrite];
             NSLog(@"in location manager %@",urlOverwrite);
             [self.webView loadRequest:request];
