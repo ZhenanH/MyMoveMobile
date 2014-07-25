@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import <Cordova/CDVViewController.h>
-
-@interface ViewController : CDVViewController<UIWebViewDelegate,CLLocationManagerDelegate>
+#import "URLConnection.h"
+@interface ViewController : CDVViewController<UIWebViewDelegate,CLLocationManagerDelegate,URLConnectionDelegate,POIListDelegate>
 @property (strong, nonatomic) IBOutlet UIActivityIndicatorView *loading;
 @property (strong, nonatomic) CLLocationManager *locationManager;
 

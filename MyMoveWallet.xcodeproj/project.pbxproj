@@ -36,7 +36,12 @@
 		D02E9F251976FD6100C443E6 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D02E9F241976FD6100C443E6 /* MapKit.framework */; };
 		D02E9F28197700F800C443E6 /* LocalMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D02E9F27197700F800C443E6 /* LocalMapViewController.m */; };
 		D02E9F2B1977128300C443E6 /* MapViewAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = D02E9F2A1977128300C443E6 /* MapViewAnnotation.m */; };
-		D02E9F2E197860EB00C443E6 /* DemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D02E9F2D197860EB00C443E6 /* DemoViewController.m */; };
+		D04328A0197EF05B008F2114 /* POI.m in Sources */ = {isa = PBXBuildFile; fileRef = D043289B197EF05B008F2114 /* POI.m */; };
+		D04328A1197EF05B008F2114 /* POIList.m in Sources */ = {isa = PBXBuildFile; fileRef = D043289D197EF05B008F2114 /* POIList.m */; };
+		D04328A2197EF05B008F2114 /* URLConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = D043289F197EF05B008F2114 /* URLConnection.m */; };
+		D04328A5197F0D19008F2114 /* GeoFenceSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D04328A4197F0D19008F2114 /* GeoFenceSettingViewController.m */; };
+		D04328A8197F5646008F2114 /* FenceMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D04328A7197F5646008F2114 /* FenceMapViewController.m */; };
+		D076D72C197D92C80001ADFC /* NearByStoresViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D076D72B197D92C80001ADFC /* NearByStoresViewController.m */; };
 		D0C7806019390B4D005D55FB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0C7805F19390B4D005D55FB /* Foundation.framework */; };
 		D0C7806219390B4D005D55FB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0C7806119390B4D005D55FB /* CoreGraphics.framework */; };
 		D0C7806419390B4D005D55FB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0C7806319390B4D005D55FB /* UIKit.framework */; };
@@ -159,8 +164,18 @@
 		D02E9F27197700F800C443E6 /* LocalMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalMapViewController.m; sourceTree = "<group>"; };
 		D02E9F291977128300C443E6 /* MapViewAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewAnnotation.h; sourceTree = "<group>"; };
 		D02E9F2A1977128300C443E6 /* MapViewAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewAnnotation.m; sourceTree = "<group>"; };
-		D02E9F2C197860EB00C443E6 /* DemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoViewController.h; sourceTree = "<group>"; };
-		D02E9F2D197860EB00C443E6 /* DemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoViewController.m; sourceTree = "<group>"; };
+		D043289A197EF05B008F2114 /* POI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POI.h; sourceTree = "<group>"; };
+		D043289B197EF05B008F2114 /* POI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = POI.m; sourceTree = "<group>"; };
+		D043289C197EF05B008F2114 /* POIList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POIList.h; sourceTree = "<group>"; };
+		D043289D197EF05B008F2114 /* POIList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = POIList.m; sourceTree = "<group>"; };
+		D043289E197EF05B008F2114 /* URLConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URLConnection.h; sourceTree = "<group>"; };
+		D043289F197EF05B008F2114 /* URLConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URLConnection.m; sourceTree = "<group>"; };
+		D04328A3197F0D19008F2114 /* GeoFenceSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeoFenceSettingViewController.h; sourceTree = "<group>"; };
+		D04328A4197F0D19008F2114 /* GeoFenceSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeoFenceSettingViewController.m; sourceTree = "<group>"; };
+		D04328A6197F5646008F2114 /* FenceMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FenceMapViewController.h; sourceTree = "<group>"; };
+		D04328A7197F5646008F2114 /* FenceMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FenceMapViewController.m; sourceTree = "<group>"; };
+		D076D72A197D92C80001ADFC /* NearByStoresViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NearByStoresViewController.h; sourceTree = "<group>"; };
+		D076D72B197D92C80001ADFC /* NearByStoresViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NearByStoresViewController.m; sourceTree = "<group>"; };
 		D0C7805C19390B4D005D55FB /* MyMoveWallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyMoveWallet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0C7805F19390B4D005D55FB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D0C7806119390B4D005D55FB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -319,6 +334,19 @@
 			name = Mixpanel;
 			sourceTree = "<group>";
 		};
+		D0432899197EF03E008F2114 /* LocationReminder */ = {
+			isa = PBXGroup;
+			children = (
+				D043289A197EF05B008F2114 /* POI.h */,
+				D043289B197EF05B008F2114 /* POI.m */,
+				D043289C197EF05B008F2114 /* POIList.h */,
+				D043289D197EF05B008F2114 /* POIList.m */,
+				D043289E197EF05B008F2114 /* URLConnection.h */,
+				D043289F197EF05B008F2114 /* URLConnection.m */,
+			);
+			name = LocationReminder;
+			sourceTree = "<group>";
+		};
 		D0C7805319390B4D005D55FB = {
 			isa = PBXGroup;
 			children = (
@@ -373,6 +401,7 @@
 		D0C7806519390B4D005D55FB /* MyMoveWallet */ = {
 			isa = PBXGroup;
 			children = (
+				D0432899197EF03E008F2114 /* LocationReminder */,
 				D02E9E7C1958E0D900C443E6 /* Util */,
 				D0DF084A19510F2300C10A63 /* iPad */,
 				D0DF07DA194A8CCE00C10A63 /* AMSlideMenu */,
@@ -384,14 +413,18 @@
 				D0C7807819390B4D005D55FB /* ViewController.m */,
 				D02E9F0F196B444A00C443E6 /* LocalDealViewController.h */,
 				D02E9F10196B444A00C443E6 /* LocalDealViewController.m */,
-				D02E9F2C197860EB00C443E6 /* DemoViewController.h */,
-				D02E9F2D197860EB00C443E6 /* DemoViewController.m */,
 				D02E9F1C196DB79500C443E6 /* InfoViewController.h */,
 				D02E9F1D196DB79500C443E6 /* InfoViewController.m */,
 				D02E9F1F19705FEB00C443E6 /* PolicyViewController.h */,
 				D02E9F2019705FEB00C443E6 /* PolicyViewController.m */,
 				D02E9F26197700F800C443E6 /* LocalMapViewController.h */,
 				D02E9F27197700F800C443E6 /* LocalMapViewController.m */,
+				D076D72A197D92C80001ADFC /* NearByStoresViewController.h */,
+				D076D72B197D92C80001ADFC /* NearByStoresViewController.m */,
+				D04328A3197F0D19008F2114 /* GeoFenceSettingViewController.h */,
+				D04328A4197F0D19008F2114 /* GeoFenceSettingViewController.m */,
+				D04328A6197F5646008F2114 /* FenceMapViewController.h */,
+				D04328A7197F5646008F2114 /* FenceMapViewController.m */,
 				D0C7807A19390B4D005D55FB /* Images.xcassets */,
 				D0C7806619390B4D005D55FB /* Supporting Files */,
 			);
@@ -612,7 +645,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D02E9F2E197860EB00C443E6 /* DemoViewController.m in Sources */,
+				D076D72C197D92C80001ADFC /* NearByStoresViewController.m in Sources */,
 				D02E9EDE196484FC00C443E6 /* MPSurveyNavigationController.m in Sources */,
 				D0DF07EB194A8CCE00C10A63 /* AMSlideMenuLeftMenuSegue.m in Sources */,
 				D02E9F2B1977128300C443E6 /* MapViewAnnotation.m in Sources */,
@@ -621,9 +654,11 @@
 				D02E9F11196B444A00C443E6 /* LocalDealViewController.m in Sources */,
 				D02E9ED6196484FC00C443E6 /* Mixpanel.m in Sources */,
 				D0DF07F0194A8CCE00C10A63 /* UIViewController+AMSlideMenu.m in Sources */,
+				D04328A8197F5646008F2114 /* FenceMapViewController.m in Sources */,
 				D0C7807919390B4D005D55FB /* ViewController.m in Sources */,
 				D02E9F2119705FEB00C443E6 /* PolicyViewController.m in Sources */,
 				D02E9EE4196484FC00C443E6 /* UIImage+MPImageEffects.m in Sources */,
+				D04328A0197EF05B008F2114 /* POI.m in Sources */,
 				D0DF07EC194A8CCE00C10A63 /* AMSlideMenuLeftTableViewController.m in Sources */,
 				D02E9E7F1958E13E00C443E6 /* NSObject+SEWebviewJSListener.m in Sources */,
 				D0C7807019390B4D005D55FB /* AppDelegate.m in Sources */,
@@ -637,12 +672,15 @@
 				D02E9EDB196484FC00C443E6 /* MPNotificationViewController.m in Sources */,
 				D02E9EE2196484FC00C443E6 /* UIColor+MPColor.m in Sources */,
 				D02E9EE0196484FC00C443E6 /* MPSurveyQuestionViewController.m in Sources */,
+				D04328A5197F0D19008F2114 /* GeoFenceSettingViewController.m in Sources */,
 				D02E9F1E196DB79500C443E6 /* InfoViewController.m in Sources */,
 				D02E9EE1196484FC00C443E6 /* NSData+MPBase64.m in Sources */,
 				D02E9ED9196484FC00C443E6 /* MPNotification.m in Sources */,
 				D02E9E7B1958E0AD00C443E6 /* NSObject+SEWebviewJSListener.m in Sources */,
+				D04328A1197EF05B008F2114 /* POIList.m in Sources */,
 				D0DF07EE194A8CCE00C10A63 /* AMSlideMenuRightMenuSegue.m in Sources */,
 				D0DF08481950ED1D00C10A63 /* DMWebBrowserViewController.m in Sources */,
+				D04328A2197EF05B008F2114 /* URLConnection.m in Sources */,
 				D02E9F28197700F800C443E6 /* LocalMapViewController.m in Sources */,
 				D0C7806C19390B4D005D55FB /* main.m in Sources */,
 			);

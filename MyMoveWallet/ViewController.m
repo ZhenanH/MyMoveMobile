@@ -12,6 +12,9 @@
 #import "NSObject+SEWebviewJSListener.h"
 #import "DMWebBrowserViewController.h"
 #import "Mixpanel.h"
+#import "NearByStoresViewController.h"
+#import "POIList.h"
+#import "URLConnection.h"
 @interface ViewController ()
 
 @end
@@ -115,7 +118,7 @@
 }
 
 -(void)webviewMessageKey:(NSString *)key value:(NSString *)val{
-    NSLog(@"herere!!! %@",key);
+
     if ([key isEqualToString:@"openwebview"]) {
         DMWebBrowserViewController *webBrowser = [[DMWebBrowserViewController alloc]
                                                   initWithURL:[NSURL URLWithString:val]
@@ -133,6 +136,19 @@
         [self initializeLocationManager];
         [self initializeLocationUpdates];
         
+    }
+    if ([key isEqualToString:@"opennearbymap"]) {
+          [self performSegueWithIdentifier:@"nearbyStores" sender:val];
+    }
+    if ([key isEqualToString:@"turnonlocationreminder"]) {
+        NSLog(@"turn on");
+        NSArray* tempArry = [[NSArray alloc] initWithObjects:val, nil];
+        URLConnection* uc = [[URLConnection alloc] init:tempArry :@"41.240252" :@"-73.034154"];
+        uc.delegate = self;
+        [uc returnListOfPoiObjects];
+    }
+    if ([key isEqualToString:@"turnofflocationreminder"]) {
+         NSLog(@"turn off");
     }
 }
 
@@ -218,6 +234,25 @@
                                               cancelButtonTitle:@"Ok"
                                               otherButtonTitles:nil];
     [alertView show];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    UINavigationController* nav = (UINavigationController*)segue.destinationViewController;
+    NearByStoresViewController *nearby = (NearByStoresViewController *)[nav visibleViewController];
+    //nearby.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+    nearby.brandName = sender;
+    [self presentViewController:nav animated:YES completion:nil];
+
+}
+
+-(void)poiListDidFinishLoading:(POIList *)poiList{
+    CLLocation *cl =  [[CLLocation alloc]initWithLatitude:41.240252 longitude:-73.03415 ];
+    [poiList setupGeofence:[[UIDevice currentDevice] systemVersion] :cl ];
+    
+}
+
+-(void)fenceTriggered:(POI *)poi{
+ 
 }
 
 @end
